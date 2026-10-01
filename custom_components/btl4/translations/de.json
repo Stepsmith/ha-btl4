@@ -1,0 +1,32 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "BTL4 Bluetooth Dimmer",
+        "description": "Gib die Bluetooth-MAC-Adresse deines BTL4-Dimmers ein.",
+        "data": {
+          "address": "Bluetooth-MAC-Adresse"
+        }
+      },
+      "bluetooth_confirm": {
+        "title": "BTL4 Bluetooth Dimmer entdeckt",
+        "description": "Home Assistant hat einen BTL4 Bluetooth Dimmer gefunden. Möchtest du ihn einrichten?"
+      }
+    },
+    "error": {
+      "invalid_address": "Die eingegebene Bluetooth-MAC-Adresse ist ungültig."
+    },
+    "abort": {
+      "already_configured": "Dieser BTL4-Dimmer ist bereits eingerichtet.",
+      "cannot_connect": "Der BTL4-Dimmer konnte nicht eingerichtet werden.",
+      "not_btl4": "Das erkannte Bluetooth-Gerät ist kein unterstützter BTL4-Dimmer."
+    }
+  },
+  "entity": {
+    "light": {
+      "channel": {
+        "name": "Kanal {channel}"
+      }
+    }
+  }
+}

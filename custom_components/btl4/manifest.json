@@ -1,0 +1,23 @@
+{
+  "domain": "btl4",
+  "name": "BTL4 Bluetooth Dimmer",
+  "version": "0.3.2",
+  "config_flow": true,
+  "documentation": "https://github.com/Stepsmith/ha-btl4",
+  "issue_tracker": "https://github.com/Stepsmith/ha-btl4/issues",
+  "codeowners": [
+    "@Stepsmith"
+  ],
+  "integration_type": "device",
+  "iot_class": "local_push",
+  "dependencies": [
+    "bluetooth_adapters"
+  ],
+  "requirements": [],
+  "bluetooth": [
+    {
+      "manufacturer_id": 89,
+      "connectable": true
+    }
+  ]
+}
