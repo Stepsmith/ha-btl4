@@ -47,90 +47,6 @@ Until this repository is available in the default HACS repository list, it can b
 
 1. Open HACS in Home Assistant.
 2. Open the custom repository dialog.
-3. Add:
-
-   `https://github.com/Stepsmith/ha-btl4`
-
-4. Select **Integration** as the repository type.
-5. Install **BTL4 Bluetooth Dimmer**.
-6. Restart Home Assistant.
-
-After the restart, Home Assistant should automatically discover a compatible BTL4 that is in Bluetooth range.
-
-## Manual installation
-
-Copy the directory:
-
-`custom_components/btl4`
-
-from this repository to:
-
-`/config/custom_components/btl4`
-
-in your Home Assistant installation.
-
-The resulting structure should look like this:
-
-```text
-/config/custom_components/btl4/
-├── __init__.py
-├── config_flow.py
-├── const.py
-├── light.py
-├── manifest.json
-└── translations/
-    ├── de.json
-    └── en.json
-cat > /config/ha-btl4/README.md <<'EOF'
-# BTL4 Bluetooth Dimmer for Home Assistant
-
-A custom Home Assistant integration for the **BTL4 4-channel Bluetooth dimmer** by **Wilhelm Koch**.
-
-The integration communicates locally with the BTL4 via Bluetooth and exposes its four dimmer channels as individual light entities in Home Assistant.
-
-No cloud connection is required.
-
-## Features
-
-- Automatic Bluetooth discovery
-- Local Bluetooth communication
-- Four independently controllable light channels
-- Turn each channel on and off
-- Adjust the brightness of each channel
-- Home Assistant device and entity integration
-- German and English translations
-- Manual setup by Bluetooth MAC address if automatic discovery is not available
-- No cloud account required
-
-## Requirements
-
-- Home Assistant with working Bluetooth support
-- A Bluetooth adapter supported by Home Assistant
-- A compatible BTL4 Bluetooth dimmer
-- The BTL4 must be within Bluetooth range of Home Assistant or a supported Bluetooth proxy
-
-## Supported hardware
-
-This integration was developed for the **BTL4 4-Kanal Dimmer Bluetooth** manufactured by **Wilhelm Koch**.
-
-Known device characteristics:
-
-- Model: BTL4
-- Supply voltage: 12 V DC
-- Maximum load: 36 W
-- Four dimmer channels
-- Bluetooth Low Energy (BLE)
-
-The integration uses Bluetooth advertisement data to identify compatible BTL4 devices.
-
-Support for other Bluetooth dimmers or other devices from the same manufacturer is not implied.
-
-## Installation with HACS
-
-Until this repository is available in the default HACS repository list, it can be added as a custom repository.
-
-1. Open HACS in Home Assistant.
-2. Open the custom repository dialog.
 3. Add `https://github.com/Stepsmith/ha-btl4`.
 4. Select **Integration** as the repository type.
 5. Install **BTL4 Bluetooth Dimmer**.
@@ -140,19 +56,17 @@ After the restart, Home Assistant should automatically discover a compatible BTL
 
 ## Manual installation
 
-Copy the directory `custom_components/btl4` from this repository to `/config/custom_components/btl4` in your Home Assistant installation.
+Copy the `custom_components/btl4` directory from this repository into the `custom_components` directory of your Home Assistant configuration.
 
-The resulting structure should look like this:
+The installed integration must contain these files:
 
-    /config/custom_components/btl4/
-    ├── __init__.py
-    ├── config_flow.py
-    ├── const.py
-    ├── light.py
-    ├── manifest.json
-    └── translations/
-        ├── de.json
-        └── en.json
+- `custom_components/btl4/__init__.py`
+- `custom_components/btl4/config_flow.py`
+- `custom_components/btl4/const.py`
+- `custom_components/btl4/light.py`
+- `custom_components/btl4/manifest.json`
+- `custom_components/btl4/translations/de.json`
+- `custom_components/btl4/translations/en.json`
 
 Restart Home Assistant after copying the files.
 
@@ -247,4 +161,4 @@ Diese Integration ist ein unabhängiges Community-Projekt und keine offizielle I
 
 ## License
 
-See [LICENSE](LICENSE).
+This project is licensed under the MIT License. See the `LICENSE` file included in this repository.
